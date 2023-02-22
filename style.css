@@ -1,0 +1,363 @@
+* {
+  font-family: "Staatliches", cursive;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+main p {
+  font-family: "Palanquin", sans-serif;
+  width: 30.5rem;
+  height: 7.5rem;
+  font-weight: 400;
+  font-size: 1.35rem;
+  line-height: 1.5rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #23053a;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  padding-top: 1rem;
+  margin-bottom: 6.3rem;
+}
+
+body {
+  max-width: clamp(38.4rem, 20rem + 20vw, 128rem);
+  margin: 0 auto;
+}
+
+header {
+  background: #8e9aaf;
+  min-height: 27.9rem;
+  align-items: center;
+  width: 38.4rem;
+}
+
+header img {
+  margin: 3.2rem 8.3rem auto 7.3rem;
+}
+
+header h1 {
+  width: 38.4rem;
+  height: 4.9rem;
+  font-weight: 400;
+  background: #cbc0d3;
+  font-size: 4rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.05rem;
+  color: #ffffff;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  padding-top: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+header p {
+  display: none;
+}
+
+main {
+  max-width: 32rem;
+  margin: 1.4rem 3.2rem 6rem;
+  display: grid;
+  background: #eff1ff;
+  width: 32rem;
+}
+
+.sorvetes {
+  position: relative;
+}
+
+.sorvetes img {
+  width: 32rem;
+  border-radius: 2rem;
+  object-fit: cover;
+  animation: tiposSorvete 700ms;
+}
+
+.sorvetes h2 {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+  width: 11.2rem;
+  height: 3.5rem;
+  background: #feeafa;
+  border-radius: 2rem;
+  text-align: center;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.05rem;
+  color: #4a4e69;
+  padding-top: 0.1rem;
+  animation: etiquetas 700ms;
+}
+
+#sorvetePaleta {
+  margin-bottom: 3.2rem;
+}
+
+#sorveteShake {
+  margin-bottom: 3.6rem;
+}
+
+#sorveteMassas {
+  margin-bottom: 3.6rem;
+}
+
+#sorvetePicoles {
+  margin-bottom: 6rem;
+}
+
+#sorvetePaleta2 {
+  display: none;
+}
+
+#sorvetePicoles2 {
+  display: none;
+}
+
+footer {
+  display: none;
+}
+
+@keyframes etiquetas {
+  0% {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes tiposSorvete {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 50rem) {
+  body {
+    display: flex;
+    margin: 0;
+  }
+
+  header {
+    position: absolute;
+    width: 27.7rem;
+    height: 100vh;
+  }
+
+  header img {
+    padding-bottom: 1rem;
+    margin-top: 2rem;
+    margin-left: 3.5rem;
+  }
+
+  header h1 {
+    margin-bottom: 3.8rem;
+    width: 27.7rem;
+  }
+
+  header p {
+    font-family: "Roboto", sans-serif;
+    width: 19rem;
+    height: 20.2rem;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    display: block;
+    margin-left: 5.4rem;
+    margin-right: 4.8rem;
+  }
+
+  main {
+    background: none;
+    margin-left: 37.5rem;
+    grid-template-areas:
+      "A B"
+      "D B"
+      "D C";
+  }
+
+  .sorvetes img {
+    width: 19rem;
+  }
+
+  main p {
+    display: none;
+  }
+
+  h2 {
+    display: none;
+  }
+
+  #sorvetePaleta {
+    grid-area: A;
+    margin: 5.4rem auto 3.2rem auto;
+  }
+
+  #sorveteShake {
+    grid-area: B;
+    margin: 5.4rem 3.2rem auto auto;
+  }
+
+  #sorveteMassas {
+    grid-area: C;
+    margin: 0 3.2rem;
+  }
+
+  #sorvetePicoles {
+    grid-area: D;
+    margin: 0;
+  }
+
+  footer {
+    font-family: "Open Sans", sans-serif;
+    display: block;
+    width: 59.2rem;
+    height: 2.8rem;
+    align-items: center;
+    position: absolute;
+    left: 44.1rem;
+    top: 57.6rem;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    color: #4a4e69;
+  }
+
+  footer span {
+    font-family: "Open Sans", sans-serif;
+  }
+}
+
+@media (min-width: 70rem) {
+  body {
+    display: flex;
+    margin: 0;
+  }
+
+  header {
+    position: absolute;
+    width: 37.7rem;
+    height: 100vh;
+  }
+
+  header img {
+    padding-bottom: 1rem;
+  }
+
+  header h1 {
+    margin-bottom: 3.8rem;
+    width: 37.7rem;
+  }
+
+  header p {
+    font-family: "Roboto", sans-serif;
+
+    width: 29rem;
+    height: 26.2rem;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.2rem;
+    line-height: 2.2rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    display: block;
+    margin-left: 5.4rem;
+    margin-right: 4.8rem;
+  }
+
+  main {
+    background: none;
+    margin-left: 47.5rem;
+    grid-template-areas:
+      "A B E"
+      "D B F"
+      "D C F";
+  }
+
+  .sorvetes img {
+    width: 22rem;
+  }
+
+  main p {
+    display: none;
+  }
+
+  h2 {
+    display: none;
+  }
+
+  #sorvetePaleta2 {
+    display: block;
+  }
+
+  #sorvetePicoles2 {
+    display: block;
+  }
+
+  #sorvetePaleta {
+    grid-area: A;
+    margin: 6.4rem auto 3.2rem auto;
+  }
+
+  #sorveteShake {
+    grid-area: B;
+    margin: 6.4rem 3.2rem;
+  }
+
+  #sorveteMassas {
+    grid-area: C;
+    margin: 0 3.2rem;
+  }
+
+  #sorvetePicoles {
+    grid-area: D;
+    margin: 0;
+  }
+
+  #sorvetePaleta2 {
+    grid-area: E;
+    margin: 6.4rem auto;
+  }
+
+  #sorvetePicoles2 {
+    grid-area: F;
+    margin: 0;
+  }
+
+  footer {
+    position: absolute;
+    left: 69.1rem;
+    top: 65.6rem;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    color: #4a4e69;
+  }
+}
